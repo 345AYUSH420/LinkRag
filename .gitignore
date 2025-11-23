@@ -1,5 +1,6 @@
-# Python virtual environment
+    # Python virtual environment
 myenv/
+rag/
 
 # VS Code settings
 .vscode/
