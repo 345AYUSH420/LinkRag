@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "RAG Web Assistant",
+  "description": "Ask questions about any website using a Python RAG backend.",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

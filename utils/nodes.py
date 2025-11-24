@@ -20,12 +20,11 @@ def generate_node(state: GraphState):
 
     chain = prompt | model | parser
 
-    print("\n--- Streaming ---\n")
-    for chunk in chain.stream({
-        "context": state["context"],
-        "question": state["question"]
-    }):
-        print(chunk, end="", flush=True)
-    print("\n-----------------\n")
-
+    def run_stream():
+        for chunk in chain.stream({
+            "context": state["context"],
+            "question": state["question"]
+        }):
+            yield chunk  # send chunk out
+    state["stream"] = run_stream()
     return state
