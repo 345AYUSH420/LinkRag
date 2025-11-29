@@ -7,3 +7,5 @@ langchain-pinecone
 langgraph
 grandalf
 uvicorn
+fastapi
+beautifulsoup4
